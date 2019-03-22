@@ -1,3 +1,9 @@
+/**
+ * https://github.com/zhanglei923/longbow-local-db
+ * License MIT
+ * zhanglei923@gmail.com
+ */
+
 const fs = require('fs');
 const pathutil = require('path');
 const moment = require('moment');
