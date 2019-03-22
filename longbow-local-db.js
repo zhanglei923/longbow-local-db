@@ -4,9 +4,9 @@ const moment = require('moment');
 const mkdir = require('make-dir')
 
 //config
-let configpath = pathutil.resolve(__dirname, './longbow-local-db-config.json')
+let configpath = pathutil.resolve(__dirname, './longbow-local-db.json')
 if(!fs.existsSync(configpath)){
-    throw "can not find config file: 'longbow-local-db-config.json'"
+    throw "can not find config file: 'longbow-local-db.json'"
 }
 let config = fs.readFileSync(configpath, 'utf8')
 console.log(config)
