@@ -86,7 +86,7 @@ let handler = {
         let filename = `todos-${count0x}.json`; 
         return filename;
     },
-    loadAllTodo:(repoName, prjName)=>{
+    loadAllData:(repoName, prjName)=>{
         let history = handler.getHistoryList(repoName, prjName);
         if(history.length===0) return [];
         let latest = history[0]
@@ -96,7 +96,7 @@ let handler = {
         let todos = fs.readFileSync(fpath, 'utf8');
         return JSON.parse(todos);
     },
-    saveAllTodo:(repoName, prjName, todos)=>{
+    saveAllData:(repoName, prjName, todos)=>{
         let count = handler.getCount(repoName, prjName);
         count++;
         let fpath = getSavePath(repoName, prjName) + '/' + handler.getFileName(count);
